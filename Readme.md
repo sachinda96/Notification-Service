@@ -9,8 +9,7 @@ This is a **Spring Boot-based Notification Service** that allows businesses to s
 - Configurable Notification Channels  
 
 ## Database Structure
-The **ER Diagram** is designed using **MySQL Workbench**, ensuring a scalable and efficient notification system.  
-
+![ER Diagram](docs/notification_db_eer.png)
 
 ## Tech Stack
 - **Java 17**
