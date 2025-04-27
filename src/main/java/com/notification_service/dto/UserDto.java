@@ -1,9 +1,17 @@
 package com.notification_service.dto;
 
 
+import lombok.*;
+
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class UserDto {
 
     private UUID id;
@@ -18,7 +26,7 @@ public class UserDto {
 
     private String deviceToken;
 
-    private String platform;
+    private List<String> platform;
 
     private String createdAt;
 

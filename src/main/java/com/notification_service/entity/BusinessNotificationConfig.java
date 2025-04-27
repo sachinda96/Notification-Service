@@ -31,7 +31,7 @@ public class BusinessNotificationConfig {
     private String apiKey;
 
     @Column(nullable = false)
-    private String createdAt;
+    private Date createdAt;
 
     private Date modifiedAt;
 

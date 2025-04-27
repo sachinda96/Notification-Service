@@ -34,11 +34,8 @@ public class UserEntity {
 
     private String deviceToken;
 
-    @Enumerated(EnumType.STRING)
-    private Platform platform;
-
     @Column(nullable = false)
-    private String createdAt;
+    private Date createdAt;
 
     private Date modifiedAt;
 
@@ -47,6 +44,4 @@ public class UserEntity {
 
 }
 
-enum Platform {
-    IOS, ANDROID, SMS, EMAIL
-}
+

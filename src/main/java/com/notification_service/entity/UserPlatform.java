@@ -1,6 +1,5 @@
 package com.notification_service.entity;
 
-import com.notification_service.entity.enums.ChannelType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,29 +7,32 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity
-@Table(name = "notification_channels")
+@Table(name = "users")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class NotificationChannelEntity {
+public class UserPlatform {
 
     @Id
     @GeneratedValue
     private UUID id;
 
-    @Column(nullable = false)
-    private String name;
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private UserEntity user;
+
+    @ManyToOne
+    @JoinColumn(name = "platform_id", nullable = false)
+    private PlatformEntity platform;
 
     @Column(nullable = false)
-    private String createdAt;
+    private Date createdAt;
 
     private Date modifiedAt;
 
     @Column(nullable = false)
     private boolean status = true;
+
 }
-
-
-
